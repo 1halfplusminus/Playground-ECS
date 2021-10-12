@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 9ed2e2fc4e98e4e419bad48c31c76e3c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - screenPosition: {fileID: 11400000, guid: 31f21b47fd94ab44684077c1459323b0, type: 2}
+  - worldPosition: {fileID: 11400000, guid: 9a7de00740fbc1d4684969add80f61e9, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

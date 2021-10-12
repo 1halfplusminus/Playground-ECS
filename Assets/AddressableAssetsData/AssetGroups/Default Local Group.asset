@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9ea6917ba62953b41ae3517da55604b3
+  m_SerializeEntries:
+  - m_GUID: 9a7de00740fbc1d4684969add80f61e9
+    m_Address: Assets/Playables/Variables/ClickWorlPosition.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 31f21b47fd94ab44684077c1459323b0
+    m_Address: Assets/Playables/Variables/MousePosition.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e47eb4ef40943ac46920a57d2c565477
+    m_Address: AssetHolder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a9175b6fd46e4cf4fbacf432d16c1c7d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7a17c9579e492d24485bda52f7c7a6c2, type: 2}
+    - {fileID: 11400000, guid: 7a06dd681f158f64aab9008d403588ce, type: 2}

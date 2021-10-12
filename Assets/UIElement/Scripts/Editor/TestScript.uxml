@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label text="Label create in UI BUILDER" />
+    <ui:TextField picking-mode="Ignore" label="Car Name" value="filler text" text="filler text" binding-path="Make" />
+    <uie:PropertyField binding-path="YearBuild" label="When was that car build" name="Year" />
+    <uie:PropertyField binding-path="Color" label="Was it a blue car" name="Color" />
+    <uie:PropertyField name="Tires" binding-path="Tires" />
+</ui:UXML>
