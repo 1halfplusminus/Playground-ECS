@@ -11,7 +11,8 @@ public class MainView: MonoBehaviour ,IConvertGameObjectToEntity {
     {
         
         var uiDocument = GetComponent<UIDocument>();
-       
+        var buttons = uiDocument.rootVisualElement.Query<Button>().ToList();
+        dstManager.AddComponentData(entity, new BlinkingButton());
     }
 
     void OnEnable() {

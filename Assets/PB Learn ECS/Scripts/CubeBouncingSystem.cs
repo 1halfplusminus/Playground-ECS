@@ -8,6 +8,7 @@ using Unity.Mathematics;
 
 [UpdateInGroup(typeof(SimulationSystemGroup))]
 [UpdateBefore(typeof(TransformSystemGroup))]
+[DisableAutoCreation]
 public class CubeBouncingSystem : JobComponentSystem
 {
     GameInput input;

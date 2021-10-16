@@ -3,8 +3,7 @@
 using Unity.Entities;
 using Unity.Jobs;
 using UnityEngine;
-using UnityEngine.UI;
-
+using UnityEngine.UIElements;
 
 
 [UpdateInGroup(typeof(PresentationSystemGroup))]
@@ -17,10 +16,10 @@ public class BlinkingButtonSystem : JobComponentSystem
     protected override void OnCreate()
     {
         base.OnCreate();
-        blinkingButtonQuery = GetEntityQuery(
-            ComponentType.ReadOnly<Button>(),
+     /*    blinkingButtonQuery = GetEntityQuery(
+            ComponentType.ReadWrite<UIDocument>(),
             ComponentType.ReadOnly<BlinkingButton>()
-        );
+        ); */
 
     }
     protected override JobHandle OnUpdate(JobHandle inputDeps)
@@ -31,11 +30,27 @@ public class BlinkingButtonSystem : JobComponentSystem
             collectTime -= 0.2f;
             on = !on;
         }
+      /*   foreach (var entity in blinkingButtonQuery.ToEntityArray(Unity.Collections.Allocator.Temp))
+        {
+            var button = EntityManager.GetComponentObject<Button>(entity);
+            button.visible = on;
+        } */
+      /*   foreach (var entity in blinkingButtonQuery.ToEntityArray(Unity.Collections.Allocator.Temp))
+        {
+            var button = EntityManager.GetComponentObject<Button>(entity);
+            button.visible = on;
+        } */
         Entities
-        .WithAll<BlinkingButton>()
-        .ForEach((Button b) => { b.interactable = on; })
         .WithoutBurst()
-        .Run();
+        .WithAll<BlinkingButton>()
+        .ForEach((Entity e, UIDocument b) => { 
+            foreach (var button in b.rootVisualElement.Query<Button>().ToList())
+            {
+                Debug.Log("Button Find");
+                button.visible = on;
+            }
+         })
+        .Run(); 
         return default;
     }
 }

@@ -2,7 +2,8 @@
 using System;
 using Unity.Entities;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+
 [Serializable]
 public struct BlinkingButton : IComponentData {
 
@@ -19,7 +20,7 @@ public class BlinkingButtonAuth : MonoBehaviour, IConvertGameObjectToEntity
         conversionSystem.AddHybridComponent(renderer);
         conversionSystem.AddHybridComponent(button); */
 /*         dstManager.AddComponentObject(entity, button); */
-        dstManager.AddComponentObject(entity, GetComponent<Button>());
-        dstManager.AddComponentData(entity, new BlinkingButton());
+/*         dstManager.AddComponentObject(entity, GetComponent<Button>());
+        dstManager.AddComponentData(entity, new BlinkingButton()); */
     }
 }

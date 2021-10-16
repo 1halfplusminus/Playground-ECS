@@ -12,6 +12,7 @@ using UnityEngine.Rendering;
 public struct Cube : IComponentData {
 
 }
+[DisableAutoCreation]
 [UpdateInGroup(typeof(SimulationSystemGroup))]
 public class CubeGameSystem : JobComponentSystem
 {
